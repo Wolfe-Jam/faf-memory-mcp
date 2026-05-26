@@ -1,0 +1,41 @@
+name: Publish to PyPI
+
+# Stage 2 of the publish flow: fires on a GitHub Release.
+# Upload to production PyPI via OIDC trusted publisher.
+#
+# Flow:
+#   1. git tag vX.Y.Z && git push origin vX.Y.Z   → testpypi.yml runs
+#   2. verify install from TestPyPI                → verify_install.py
+#   3. gh release create vX.Y.Z                    → this workflow runs (PyPI prod)
+#
+# Trusted publisher configured at:
+# https://pypi.org/manage/project/faf-memory-mcp/settings/publishing/
+#   Environment: pypi
+#   Workflow:    pypi.yml
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish to PyPI
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write  # required for OIDC trusted publisher
+
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+
+      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b  # v8.1.0
+
+      - name: Build (sdist + wheel)
+        run: uv build
+
+      - name: Publish to PyPI (OIDC trusted publisher — no token)
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # Pinned to `release/v1` per PyPA's official guidance — they curate
+        # this moving branch for security updates. See:
+        # https://github.com/pypa/gh-action-pypi-publish#readme

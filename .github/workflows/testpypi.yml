@@ -1,0 +1,43 @@
+name: Publish to TestPyPI
+
+# Stage 1 of the publish flow: fires on every version-tag push.
+# Stage to TestPyPI for verification BEFORE creating a GitHub Release
+# (which then triggers pypi.yml for production).
+#
+# Flow:
+#   1. git tag vX.Y.Z && git push origin vX.Y.Z   → this workflow runs
+#   2. verify install from TestPyPI                → verify_install.py
+#   3. gh release create vX.Y.Z                    → triggers pypi.yml (prod)
+#
+# Trusted publisher configured at:
+# https://test.pypi.org/manage/project/faf-memory-mcp/settings/publishing/
+#   Environment: testpypi
+#   Workflow:    testpypi.yml
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  publish-testpypi:
+    name: Publish to TestPyPI
+    runs-on: ubuntu-latest
+    environment: testpypi
+    permissions:
+      id-token: write  # required for OIDC trusted publisher
+
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+
+      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b  # v8.1.0
+
+      - name: Build (sdist + wheel)
+        run: uv build
+
+      - name: Publish to TestPyPI (OIDC trusted publisher — no token)
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+        # `release/v1` pinning per PyPA's official guidance.

@@ -36,6 +36,12 @@ dependencies = [
     "fastmcp>=2.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "ruff>=0.6",
+]
+
 [project.urls]
 Homepage = "https://faf.one"
 Repository = "https://github.com/Wolfe-Jam/faf-memory-mcp"
@@ -52,3 +58,23 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["faf_memory_mcp"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["dist", "build", ".venv"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"

@@ -16,9 +16,8 @@ import os
 from pathlib import Path
 from typing import Any
 
-from fastmcp import FastMCP
-
 from claude_fafm_sdk import Soul
+from fastmcp import FastMCP
 
 # Configuration (env, read once at startup)
 DEFAULT_NAMEPOINT = os.environ.get("FAF_SOUL_NAMEPOINT", "@local")

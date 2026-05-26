@@ -6,6 +6,7 @@ Cross-vendor persistent memory in a file you can read. Offline-first. Your soul,
 
 Wraps [`claude-fafm-sdk`](https://pypi.org/project/claude-fafm-sdk/) via [`fastmcp`](https://pypi.org/project/fastmcp/). Receipt: **400+× faster type-filter queries vs `grep`** on a real 492-file AI memory corpus — falsifiable methodology at [`Wolfe-Jam/faf-memory-proof`](https://github.com/Wolfe-Jam/faf-memory-proof).
 
+[![CI](https://github.com/Wolfe-Jam/faf-memory-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Wolfe-Jam/faf-memory-mcp/actions/workflows/ci.yml)
 [![IANA](https://img.shields.io/badge/IANA-application%2Fvnd.fafm%2Byaml-FF6B35)](https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml)
 [![Zenodo DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20348942-00D4D4)](https://doi.org/10.5281/zenodo.20348942)
 [![PyPI](https://img.shields.io/pypi/v/faf-memory-mcp)](https://pypi.org/project/faf-memory-mcp/)

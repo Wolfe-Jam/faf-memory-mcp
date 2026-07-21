@@ -78,3 +78,9 @@ select = [
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = "-ra --strict-markers"
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+exclude = ["dist/", "build/", ".venv/", "tests/"]
+

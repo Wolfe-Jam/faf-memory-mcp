@@ -1,8 +1,18 @@
 # faf-memory-mcp
 
+**v0.1.1** — etch writes the file so memory survives the process. Plugin install matches live `faf-memory@claude-community`.
+
 **MCP server for `.fafm` — the Permanent Memory Layer (PML) for Claude Code, Cursor, Grok, and any MCP host.**
 
 Cross-vendor persistent memory in a file you can read. Offline-first. Your soul, your bytes.
+
+## What's New in 0.1.1
+
+etch writes the file so memory survives the process. Plugin install matches live `faf-memory@claude-community`.
+
+- `etch` persists to `$FAF_SOUL_PATH` immediately (default `./soul.fafm`).
+- Claude Code install: `claude plugin install faf-memory@claude-community`.
+- Full arc: [CHANGELOG](CHANGELOG.md).
 
 Wraps [`claude-fafm-sdk`](https://pypi.org/project/claude-fafm-sdk/) via [`fastmcp`](https://pypi.org/project/fastmcp/). Receipt: **400+× faster type-filter queries vs `grep`** on a real 492-file AI memory corpus — falsifiable methodology at [`Wolfe-Jam/faf-memory-proof`](https://github.com/Wolfe-Jam/faf-memory-proof).
 
@@ -16,6 +26,8 @@ Wraps [`claude-fafm-sdk`](https://pypi.org/project/claude-fafm-sdk/) via [`fastm
 ## Why
 
 Every AI session, your agent starts blank — no memory of what you decided yesterday, what worked, what was tried. The fix isn't another hosted memory service; it's a **file** the AI reads at session start and writes back to as it learns. That file is `.fafm` — IANA-registered, cross-vendor, and 996 KB / 49 ms cold-load for a 492-fact corpus (full numbers: [the receipt](https://github.com/Wolfe-Jam/faf-memory-proof)).
+
+This server is that file, over MCP. FAFA’s `etch_memory` / `recall_memory` is the hosted namepoint path on mcpaas. Complementary, not a second product.
 
 ## Install
 

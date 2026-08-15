@@ -2,10 +2,13 @@
 
 All notable changes to `faf-memory-mcp` are documented here.
 
-## Unreleased
+## [0.1.1] — 2026-08-15
 
-- `etch` now writes `$FAF_SOUL_PATH` immediately so facts survive process exit.
-- README plugin install matches live `faf-memory@claude-community`.
+etch writes the file so memory survives the process. Plugin install matches live `faf-memory@claude-community`.
+
+- `etch` writes `$FAF_SOUL_PATH` immediately so facts survive process exit.
+- README plugin install is `faf-memory@claude-community` (no longer “coming soon”).
+- This server is the local `.fafm` file. FAFA `etch_memory` / `recall_memory` is the hosted namepoint path.
 
 ## [0.1.0] — 2026-05-26 — Initial release
 

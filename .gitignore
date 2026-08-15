@@ -12,3 +12,5 @@ build/
 .mypy_cache/
 soul.fafm
 *.fafm.local
+.faf-dna
+uv.lock

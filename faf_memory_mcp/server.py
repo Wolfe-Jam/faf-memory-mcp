@@ -45,6 +45,11 @@ def _fact_dict(fact: Any) -> dict[str, Any]:
     return {"text": obj} if isinstance(obj, str) else obj
 
 
+def _persist(soul: Soul) -> Path:
+    """Write the in-memory soul to $FAF_SOUL_PATH (default ./soul.fafm)."""
+    return soul.save(DEFAULT_PATH)
+
+
 mcp = FastMCP("faf-memory")
 
 
@@ -56,8 +61,10 @@ def etch(
     priority: str = "standard",
     tags: list[str] | None = None,
 ) -> dict[str, Any]:
-    """Write a durable fact to .fafm memory. If ``id`` matches an existing fact,
-    it's updated in place (O(1) dedup); otherwise appended.
+    """Write a durable fact to .fafm memory and persist it to disk immediately.
+    If ``id`` matches an existing fact, it's updated in place (O(1) dedup);
+    otherwise appended. Survives process exit — writes $FAF_SOUL_PATH
+    (default ./soul.fafm).
 
     Args:
         text:     The fact text (required).
@@ -68,6 +75,7 @@ def etch(
     """
     soul = _get_soul()
     fact = soul.etch(text=text, id=id, type=type, priority=priority, tags=tags)
+    _persist(soul)
     return _fact_dict(fact)
 
 

@@ -76,6 +76,19 @@ def test_recall_substring_query(soul_env):
     assert matches[0]["id"] == "q1"
 
 
+def test_etch_persists_without_save_soul(soul_env):
+    """etch must write the file so memory survives process exit."""
+    server, path = soul_env
+    _call(server.etch, text="survives restart", id="persist-1")
+    assert path.exists(), "etch did not write $FAF_SOUL_PATH"
+
+    server._soul = None
+    loaded = _call(server.load_soul)
+    assert loaded["fact_count"] == 1
+    facts = _call(server.list_facts)
+    assert facts[0]["text"] == "survives restart"
+
+
 def test_save_then_load_round_trip(soul_env):
     server, path = soul_env
     _call(server.etch, text="persistent", id="p", priority="high")

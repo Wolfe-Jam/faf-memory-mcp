@@ -25,11 +25,16 @@ uvx faf-memory-mcp
 
 ## Use in Claude Code (recommended)
 
-Via the [`faf-memory`](https://github.com/Wolfe-Jam/faf-memory) plugin (coming to `claude-plugins-community`):
+Via the [`faf-memory`](https://github.com/Wolfe-Jam/faf-memory) plugin on `claude-plugins-community`:
 
 ```bash
-/plugin install faf-memory
+claude plugin marketplace add anthropics/claude-plugins-community
+claude plugin install faf-memory@claude-community
 ```
+
+Or in-session: `/plugin install faf-memory@claude-community`
+
+Requires [`uv`](https://docs.astral.sh/uv/) — the plugin launches this server with `uvx`.
 
 Or wire `.mcp.json` directly:
 
@@ -46,10 +51,10 @@ Or wire `.mcp.json` directly:
 
 | Tool | What it does |
 |---|---|
-| `etch(text, id?, type?, priority?, tags?)` | Write a durable fact. O(1) dedup by `id`. |
+| `etch(text, id?, type?, priority?, tags?)` | Write a durable fact and persist to `$FAF_SOUL_PATH`. O(1) dedup by `id`. |
 | `recall(query?, type?, tags?, min_priority?, limit?)` | Filter (substring + type + tags + priority floor) → rank by priority then recency. |
 | `list_facts()` | List ALL facts — no filter, no rank. |
-| `save_soul(path?)` | Persist the soul to a `.fafm` file. |
+| `save_soul(path?)` | Write the soul to another path (etch already saves the default file). |
 | `load_soul(path?)` | Load a `.fafm` from disk, replacing the in-memory soul. |
 
 ## Configuration

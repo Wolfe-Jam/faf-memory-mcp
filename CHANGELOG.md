@@ -2,6 +2,11 @@
 
 All notable changes to `faf-memory-mcp` are documented here.
 
+## Unreleased
+
+- `etch` now writes `$FAF_SOUL_PATH` immediately so facts survive process exit.
+- README plugin install matches live `faf-memory@claude-community`.
+
 ## [0.1.0] — 2026-05-26 — Initial release
 
 - Wraps [`claude-fafm-sdk`](https://pypi.org/project/claude-fafm-sdk/) `>= 0.3.0` via `fastmcp >= 2.0`.

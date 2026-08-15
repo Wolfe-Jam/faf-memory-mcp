@@ -1,0 +1,41 @@
+{
+  "birthCertificate": {
+    "born": "2026-05-26T06:26:26.375Z",
+    "birthDNA": 50,
+    "birthDNASource": "init",
+    "projectDNA": "8864650c579593ab",
+    "certificate": "FAF-2026-FAFMEMOR-WNCI"
+  },
+  "versions": [
+    {
+      "version": "v1.0.0",
+      "timestamp": "2026-05-26T06:26:26.375Z",
+      "score": 50,
+      "changes": [
+        "Birth — initial context"
+      ],
+      "growth": 0
+    }
+  ],
+  "current": {
+    "version": "v1.0.0",
+    "score": 50,
+    "lastSync": "2026-05-26T06:26:26.375Z"
+  },
+  "growth": {
+    "totalGrowth": 0,
+    "daysActive": 0,
+    "milestones": [
+      {
+        "type": "birth",
+        "score": 50,
+        "date": "2026-05-26T06:26:26.375Z",
+        "version": "v1.0.0",
+        "label": "Birth",
+        "emoji": "🐣"
+      }
+    ]
+  },
+  "lastModified": "2026-05-26T06:26:26.381Z",
+  "format": "faf-dna-v1"
+}

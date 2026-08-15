@@ -2,6 +2,10 @@
 
 All notable changes to `faf-memory-mcp` are documented here.
 
+## [Unreleased]
+
+- Hosts-pull: Cursor · Grok · any host share one `mcpServers` JSON. Claude plugin unchanged.
+
 ## [0.1.1] — 2026-08-15
 
 etch writes the file so memory survives the process. Plugin install matches live `faf-memory@claude-community`.

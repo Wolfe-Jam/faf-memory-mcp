@@ -35,9 +35,9 @@ This server is that file, over MCP. FAFA’s `etch_memory` / `recall_memory` is 
 uvx faf-memory-mcp
 ```
 
-## Use in Claude Code (recommended)
+## Use in a host
 
-Via the [`faf-memory`](https://github.com/Wolfe-Jam/faf-memory) plugin on `claude-plugins-community`:
+**Claude Code** — [`faf-memory`](https://github.com/Wolfe-Jam/faf-memory) plugin on `claude-plugins-community`:
 
 ```bash
 claude plugin marketplace add anthropics/claude-plugins-community
@@ -48,13 +48,15 @@ Or in-session: `/plugin install faf-memory@claude-community`
 
 Requires [`uv`](https://docs.astral.sh/uv/) — the plugin launches this server with `uvx`.
 
-Or wire `.mcp.json` directly:
+**Cursor · Grok · any host** — same JSON. Cursor: `~/.cursor/mcp.json`. Grok: `.mcp.json` (Grok also reads Cursor’s file).
 
 ```json
 {
-  "faf-memory": {
-    "command": "uvx",
-    "args": ["faf-memory-mcp"]
+  "mcpServers": {
+    "faf-memory": {
+      "command": "uvx",
+      "args": ["faf-memory-mcp"]
+    }
   }
 }
 ```

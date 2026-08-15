@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+type: software
+message: "If you use faf-memory-mcp or the .fafm format in your work, please cite the Memory paper in `preferred-citation`. The Agents paper in `references` is the companion for the agentic era."
+title: "faf-memory-mcp — MCP server for the .fafm Permanent Memory Layer"
+authors:
+  - family-names: Wolfe
+    given-names: James
+    orcid: "https://orcid.org/0009-0007-0801-3841"
+    affiliation: "FAF Foundation"
+license: MIT
+repository-code: "https://github.com/Wolfe-Jam/faf-memory-mcp"
+url: "https://memory.faf.one"
+keywords:
+  - mcp
+  - .fafm
+  - .fafa
+  - memory
+preferred-citation:
+  type: article
+  title: "Permanent Memory and Instant Recall: The .fafm Standard for Multi-Profile AI Agent Memory"
+  authors:
+    - family-names: Wolfe
+      given-names: James
+      orcid: "https://orcid.org/0009-0007-0801-3841"
+      affiliation: "FAF Foundation"
+  year: 2026
+  month: 5
+  doi: 10.5281/zenodo.20348942
+  url: "https://doi.org/10.5281/zenodo.20348942"
+  publisher:
+    name: "Zenodo"
+references:
+  - type: article
+    title: "Why Agents Need a Passport: .fafa — Portable Identity for the Agentic Era"
+    authors:
+      - family-names: Wolfe
+        given-names: James
+        orcid: "https://orcid.org/0009-0007-0801-3841"
+        affiliation: "FAF Foundation"
+    year: 2026
+    month: 8
+    doi: 10.5281/zenodo.21951641
+    url: "https://doi.org/10.5281/zenodo.21951641"
+    publisher:
+      name: "Zenodo"

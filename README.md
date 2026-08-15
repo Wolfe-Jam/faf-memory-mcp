@@ -10,6 +10,7 @@ Wraps [`claude-fafm-sdk`](https://pypi.org/project/claude-fafm-sdk/) via [`fastm
 [![CI](https://github.com/Wolfe-Jam/faf-memory-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Wolfe-Jam/faf-memory-mcp/actions/workflows/ci.yml)
 [![IANA](https://img.shields.io/badge/IANA-application%2Fvnd.fafm%2Byaml-FF6B35)](https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml)
 [![Zenodo DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20348942-00D4D4)](https://doi.org/10.5281/zenodo.20348942)
+[![DOI: Agents paper](https://img.shields.io/badge/DOI-Agents%20paper-FF6B35)](https://doi.org/10.5281/zenodo.21951641)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ## Why
@@ -86,6 +87,12 @@ Biases toward **deterministic recall** (substring + type + tags + priority + rec
 - [`Wolfe-Jam/faf-memory-proof`](https://github.com/Wolfe-Jam/faf-memory-proof) — the falsifiable receipt (412× methodology + scripts)
 - [`claude-fafm-sdk`](https://pypi.org/project/claude-fafm-sdk/) — the open Python SDK this server wraps
 - [`Wolfe-Jam/faf`](https://github.com/Wolfe-Jam/faf) — the format spec + IANA registration
+
+## Citation
+
+> Wolfe, J. (2026). *Permanent Memory and Instant Recall: The .fafm Standard for Multi-Profile AI Agent Memory*. Zenodo. https://doi.org/10.5281/zenodo.20348942
+
+> Wolfe, J. (2026). *Why Agents Need a Passport: .fafa — Portable Identity for the Agentic Era*. Zenodo. https://doi.org/10.5281/zenodo.21951641
 
 ## License
 

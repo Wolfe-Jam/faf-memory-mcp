@@ -12,5 +12,6 @@ build/
 .mypy_cache/
 soul.fafm
 *.fafm.local
-# uv.lock is the Python installer pin, not FAF lineage. Recreate with `uv lock`.
+# FAF files live in git — do not add project.faf / .faf-dna here.
+# Named reasons below: personal soul + Python installer pin (not FAF).
 uv.lock

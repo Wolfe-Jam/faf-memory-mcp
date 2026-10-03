@@ -1,6 +1,6 @@
 [project]
 name = "faf-memory-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "MCP server for .fafm — the Permanent Memory Layer (PML). Wraps claude-fafm-sdk via fastmcp. IANA-registered, cross-vendor, offline-first."
 authors = [{ name = "James Wolfe", email = "team@faf.one" }]
 readme = "README.md"

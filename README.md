@@ -1,18 +1,18 @@
 # faf-memory-mcp
 
-**v0.1.1** — etch writes the file so memory survives the process. Plugin install matches live `faf-memory@claude-community`.
+**v0.1.2** — Plugin install is `faf-memory@faf-plugins` (Anthropic directory listing in review).
 
 **MCP server for `.fafm` — the Permanent Memory Layer (PML) for Claude Code, Cursor, Grok, and any MCP host.**
 
 Cross-vendor persistent memory in a file you can read. Offline-first. Your soul, your bytes.
 
-## What's New in 0.1.1
+## What's New in 0.1.2
 
-etch writes the file so memory survives the process. Plugin install matches live `faf-memory@claude-community`.
+Plugin install is `faf-memory@faf-plugins` (Anthropic directory listing in review).
 
-- `etch` persists to `$FAF_SOUL_PATH` immediately (default `./soul.fafm`).
-- Claude Code install: `claude plugin install faf-memory@claude-community`.
-- Full arc: [CHANGELOG](CHANGELOG.md).
+- Corrects 0.1.1, which said the plugin was live at `faf-memory@claude-community`. It isn't in that marketplace; it's in the FAF marketplace, and its Anthropic directory listing is in review.
+- Hosts: Cursor, Grok and any MCP host share one `mcpServers` JSON (below).
+- No code changes. Full arc: [CHANGELOG](CHANGELOG.md).
 
 Wraps [`claude-fafm-sdk`](https://pypi.org/project/claude-fafm-sdk/) via [`fastmcp`](https://pypi.org/project/fastmcp/). Receipt: **400+× faster type-filter queries vs `grep`** on a real 492-file AI memory corpus — falsifiable methodology at [`Wolfe-Jam/faf-memory-proof`](https://github.com/Wolfe-Jam/faf-memory-proof).
 
@@ -37,14 +37,12 @@ uvx faf-memory-mcp
 
 ## Use in a host
 
-**Claude Code** — [`faf-memory`](https://github.com/Wolfe-Jam/faf-memory) plugin on `claude-plugins-community`:
+**Claude Code** — the [`faf-memory`](https://github.com/Wolfe-Jam/faf-memory) plugin, from the FAF marketplace (Anthropic directory listing in review):
 
 ```bash
-claude plugin marketplace add anthropics/claude-plugins-community
-claude plugin install faf-memory@claude-community
+claude plugin marketplace add Wolfe-Jam/faf-plugins
+claude plugin install faf-memory@faf-plugins
 ```
-
-Or in-session: `/plugin install faf-memory@claude-community`
 
 Requires [`uv`](https://docs.astral.sh/uv/) — the plugin launches this server with `uvx`.
 

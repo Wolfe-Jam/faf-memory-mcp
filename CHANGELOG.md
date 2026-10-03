@@ -4,7 +4,13 @@ All notable changes to `faf-memory-mcp` are documented here.
 
 ## [Unreleased]
 
-- Hosts-pull: Cursor · Grok · any host share one `mcpServers` JSON. Claude plugin unchanged.
+## [0.1.2] — 2026-10-03
+
+Plugin install is `faf-memory@faf-plugins` (Anthropic directory listing in review).
+
+- Corrects 0.1.1, which said the plugin was live at `faf-memory@claude-community`. It isn't in that marketplace; install is `faf-memory@faf-plugins` (Wolfe-Jam/faf-plugins), and the Anthropic directory listing is in review.
+- Hosts: Cursor · Grok · any host share one `mcpServers` JSON.
+- No code changes.
 
 ## [0.1.1] — 2026-08-15
 

@@ -31,7 +31,7 @@ human_context:
   what: Five-tool MCP adapter over claude-fafm-sdk — etch, recall, list_facts, save_soul, load_soul
   why: Agents forget across sessions; the store should be a file you can diff, not a hosted lock-in
   where: PyPI faf-memory-mcp · GitHub Wolfe-Jam/faf-memory-mcp · memory.faf.one
-  when: v0.1.1 — 2026-08-15 — etch persists to $FAF_SOUL_PATH
+  when: v0.1.2 — 2026-10-03 — plugin install is faf-memory@faf-plugins
   how: uvx faf-memory-mcp
 monorepo:
   packages_count: slotignored

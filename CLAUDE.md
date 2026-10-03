@@ -27,10 +27,10 @@ MCP door for the .fafm file — etch persists to disk so any MCP host gets offli
 - **What:** Five-tool MCP adapter over claude-fafm-sdk — etch, recall, list_facts, save_soul, load_soul
 - **Why:** Agents forget across sessions; the store should be a file you can diff, not a hosted lock-in
 - **Where:** PyPI faf-memory-mcp · GitHub Wolfe-Jam/faf-memory-mcp · memory.faf.one
-- **When:** v0.1.1 — 2026-08-15 — etch persists to $FAF_SOUL_PATH
+- **When:** v0.1.2 — 2026-10-03 — plugin install is faf-memory@faf-plugins
 - **How:** uvx faf-memory-mcp
 
 ---
 
-*STATUS: BI-SYNC ACTIVE — 2026-08-15T20:03:24.597Z*
+*STATUS: SYNC ACTIVE — 2026-10-03T17:29:28.962Z*
 <!-- faf:end -->

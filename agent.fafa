@@ -1,0 +1,46 @@
+version: "1.0"
+agent:
+  name: faf-memory-mcp
+  displayName: faf-memory-mcp
+  id: urn:air:faf.one:agent:faf-memory-mcp
+  version: 0.1.2
+  description: "MCP server for .fafm, the Permanent Memory Layer: durable facts in a local file that any MCP host can read and write."
+  homepage: https://faf.one
+capabilities:
+  - name: etch
+    type: tool
+    description: write a durable fact to .fafm memory and save it to disk at once
+    tags:
+      - etch
+  - name: recall
+    type: tool
+    description: find facts by text, type, tags and priority floor, ranked by priority then recency
+    tags:
+      - recall
+  - name: list_facts
+    type: tool
+    description: list every fact in the current soul
+    tags:
+      - list_facts
+  - name: save_soul
+    type: tool
+    description: save the current soul to a .fafm file
+    tags:
+      - save_soul
+  - name: load_soul
+    type: tool
+    description: load a .fafm soul from disk, replacing the one in memory
+    tags:
+      - load_soul
+endpoints:
+  - protocol: mcp
+    transport: stdio
+    location: faf-memory-mcp
+metadata:
+  cards:
+    domain: faf.one
+    examples:
+      - Remember that we only deploy on Fridays
+      - What do you remember about the database?
+      - List everything in my memory
+      - Load my soul from ~/notes/soul.fafm

@@ -1,5 +1,7 @@
 # faf-memory-mcp
 
+[![Business card · Get yours →](https://wolfe-jam.github.io/agent-business-card/badge.svg)](https://wolfe-jam.github.io/agent-business-card/?repo=Wolfe-Jam/faf-memory-mcp)
+
 **v0.1.2** — Plugin install is `faf-memory@faf-plugins` (Anthropic directory listing in review).
 
 **MCP server for `.fafm` — the Permanent Memory Layer (PML) for Claude Code, Cursor, Grok, and any MCP host.**

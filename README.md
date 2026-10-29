@@ -4,6 +4,8 @@
 
 **v0.1.2** — Plugin install is `faf-memory@faf-plugins` (Anthropic directory listing in review).
 
+⭐ [Star it on GitHub](https://github.com/Wolfe-Jam/faf-memory-mcp): bookmarks it for you, helps other devs find it too.
+
 **MCP server for `.fafm` — the Permanent Memory Layer (PML) for Claude Code, Cursor, Grok, and any MCP host.**
 
 Cross-vendor persistent memory in a file you can read. Offline-first. Your soul, your bytes.
